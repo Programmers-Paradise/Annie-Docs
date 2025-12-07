@@ -39,7 +39,7 @@ jobs:
       - name: Check all Markdown links (internal & external)
         uses: lycheeverse/lychee-action@v2.0.2
         with:
-          args: --verbose --no-progress --exclude-mail --timeout 15 --max-concurrency 10 --exclude 'https://github.com/.*/edit/.*' --exclude 'https://github.com/.*/raw/.*' --exclude 'https://fonts.gstatic.com' --exclude 'http://localhost:.*' --exclude '^file://.*' --exclude 'https://www.youtube.com/watch\?v=example.*' --exclude 'https://plausible.io/docs/experiments' '**/*.md' 'site/**/*.html'
+          args: --verbose --no-progress --exclude-mail --timeout 15 --max-concurrency 10 --max-retries 3 --exclude 'https://github.com/.*/edit/.*' --exclude 'https://github.com/.*/raw/.*' --exclude 'https://fonts.gstatic.com' --exclude 'http://localhost:.*' --exclude '^file://.*' --exclude 'https://www.youtube.com/watch\?v=example.*' --exclude 'https://plausible.io/docs/experiments' '**/*.md' 'site/**/*.html'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
