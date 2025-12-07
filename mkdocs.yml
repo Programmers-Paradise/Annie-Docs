@@ -78,6 +78,7 @@ nav:
       - Filtered Search: filtering.md
   - Examples: examples.md
   - Contributing: contributing.md
+  - Changelog: changelog.md
 
 markdown_extensions:
   - toc:
