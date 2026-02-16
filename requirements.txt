@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-babel==2.17.0
+babel==2.18.0
     # via mkdocs-material
 backrefs==6.1
     # via mkdocs-material
@@ -26,7 +26,7 @@ jinja2==3.1.6
     # via
     #   mkdocs
     #   mkdocs-material
-markdown==3.10.1
+markdown==3.10.2
     # via
     #   mkdocs
     #   mkdocs-material
@@ -53,13 +53,13 @@ packaging==26.0
     # via mkdocs
 paginate==0.5.7
     # via mkdocs-material
-pathspec==1.0.3
+pathspec==1.0.4
     # via mkdocs
-platformdirs==4.5.1
+platformdirs==4.9.2
     # via mkdocs-get-deps
 pygments==2.19.2
     # via mkdocs-material
-pymdown-extensions==10.20.1
+pymdown-extensions==10.21
     # via mkdocs-material
 python-dateutil==2.9.0.post0
     # via ghp-import
