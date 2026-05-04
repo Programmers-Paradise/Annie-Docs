@@ -6,7 +6,7 @@
 #
 babel==2.18.0
     # via mkdocs-material
-backrefs==6.2
+backrefs==7.0
     # via mkdocs-material
 brotli==1.2.0
     # via -r requirements.in
