@@ -503,7 +503,13 @@ See the main CONTRIBUTING guide for details.
 This project is licensed under the **MIT License**. See [LICENSE](./LICENSE) for details.
 ## Performance
 
-### Single-Query Overhead
-
-For small queries, Python function call overhead dominates. Use `.search_batch()` for multiple vectors.
+Exact search runs in Rust over contiguous memory with vectorised distance kernels,
+in parallel across cores and without holding the GIL. In our measurements it matches
+FAISS's flat index and is 2–9× faster than NumPy. `PyHnswIndex` builds on the
+[`hnsw_rs`](https://crates.io/crates/hnsw_rs) crate; it reaches the same recall as
+hnswlib and FAISS but is 3–7× slower per query, so prefer those libraries when raw HNSW
+throughput is what matters. See
+[docs/benchmarks.md](https://github.com/Programmers-Paradise/Annie/blob/main/docs/benchmarks.md)
+for the numbers and how to reproduce them with
+[`benchmarks/compare.py`](https://github.com/Programmers-Paradise/Annie/blob/main/benchmarks/compare.py).
 
